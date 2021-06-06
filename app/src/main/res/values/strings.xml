@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Medical Utility</string>
+
+    <string name="lbl_main_header">Choose your contraceptive method!</string>
+    <string name="CuIUD">Cu IUD</string>
+    <string name="implant">Implant</string>
+    <string name="syanapress">DMPASc/IM</string>
+    <string name="ok_pill">Ok Pill</string>
+    <string name="iud">LNG-IUD</string>
+    <string name="coc_p_cvr">COC,P,CVR</string>
 </resources>
