@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mec"
+        android:title="Medical Eligibility Criteria" />
+    <item android:title="Sputum AFB fUp Date" />
+</menu>

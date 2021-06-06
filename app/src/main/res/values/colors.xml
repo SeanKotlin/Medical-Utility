@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_header">#D6138B</color>
+    <color name="color_chapter">#933595</color>
+    <color name="color_white">#FFFFFFFF</color>
+    <color name="color_text">#571D12</color>
+</resources>

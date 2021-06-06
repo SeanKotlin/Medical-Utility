@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MedicalUtility" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_header</item>
+        <item name="colorPrimaryVariant">@color/color_chapter</item>
+        <item name="colorOnPrimary">@color/color_white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_text</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="text" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="text.title">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text.small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text.subtitle">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
