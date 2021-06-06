@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             expandableListView!!.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
-                val intent = ResultActivity.newIntent(applicationContext,groupPosition,childPosition)
+                val title = listData[(titleList as ArrayList<String>)[groupPosition]]!!.get(childPosition)
+                val intent = ResultActivity.newIntent(applicationContext,groupPosition,childPosition, title)
                 startActivity(intent)
                 false
             }

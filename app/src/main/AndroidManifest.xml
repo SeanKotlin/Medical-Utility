@@ -20,7 +20,10 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".ResultActivity" android:parentActivityName=".MainActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity
+            android:name=".ResultActivity"
+            android:parentActivityName=".MainActivity"
+            />
 
         <meta-data
             android:name="preloaded_fonts"
