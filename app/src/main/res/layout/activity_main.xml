@@ -14,11 +14,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/main_menu">
+        >
 
         <TextView
             android:id="@+id/title"
-            style="@style/text.title"
+            style="@style/text.subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medical Utility"

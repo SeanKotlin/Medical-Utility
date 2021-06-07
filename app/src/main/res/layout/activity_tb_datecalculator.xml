@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_backarrow">
+
+        <TextView
+            style="@style/text.subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sputum AFB f/up schedule"
+            android:textColor="@color/color_white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    TB follow up date container-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbar">
+
+
+        <!--        body here-->
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/rbGroup"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbIR"
+                android:layout_weight="1"
+                android:textColor="@color/color_header"
+                android:text="Initial Regimen"
+                />
+            <RadioButton
+                android:id="@+id/rbRR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/color_header"
+                android:text="Retreatment Regimen"
+                />
+        </RadioGroup>
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_extension"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Extension for one month during phase change"
+            android:textColor="#4E4D4D"
+            app:layout_constraintTop_toBottomOf="@id/rbGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/calendarIcon"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_margin="24dp"
+            android:background="#AE933595"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_extension" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enrollDate"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Seletcted Date"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/calendarIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/calendarIcon"
+            app:layout_constraintTop_toTopOf="@id/calendarIcon"
+            app:strokeColor="@color/color_chapter"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/lbM2"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calendarIcon"
+            android:layout_margin="24dp"
+            android:background="@color/color_header"
+            tools:text="M2"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:paddingTop="8dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/m2Date"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Month 2 Follow Up Date"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/lbM2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lbM2"
+            app:layout_constraintTop_toTopOf="@id/lbM2"
+            app:strokeColor="@color/color_chapter"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/lbextension"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbM2"
+            android:layout_margin="24dp"
+            android:background="@color/color_header"
+            tools:text="M+"
+            android:visibility="gone"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:paddingTop="8dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/extensionDate"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Extension Month"
+            android:visibility="gone"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/lbextension"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lbextension"
+            app:layout_constraintTop_toTopOf="@id/lbextension"
+            app:strokeColor="@color/color_chapter"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/lbM5"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbextension"
+            android:layout_margin="24dp"
+            android:background="@color/color_header"
+            tools:text="M5"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:paddingTop="8dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/m5Date"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Month 5 sputum check"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/lbM5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lbM5"
+            app:layout_constraintTop_toTopOf="@id/lbM5"
+            app:strokeColor="@color/color_chapter"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/lbM6"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbM5"
+            android:layout_margin="24dp"
+            android:background="@color/color_header"
+            tools:text="M6"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:paddingTop="8dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/m6Date"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="16dp"
+            android:hint="End of treatment sputum check"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/lbM6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lbM6"
+            app:layout_constraintTop_toTopOf="@id/lbM6"
+            app:strokeColor="@color/color_chapter"
+            app:strokeWidth="1dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_check"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="24dp"
+            android:text="Check Sputum Follow Up Date"
+            android:textAllCaps="false"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

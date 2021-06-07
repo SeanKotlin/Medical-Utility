@@ -36,6 +36,10 @@ class ResultActivity : AppCompatActivity() {
         val childId = getChildId().toString()
         val titleName = gettitle()
 
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         resulttitle.text = titleName
 
         val id = groupId+childId
