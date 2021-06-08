@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.tbdate -> startActivity(Intent(this,TBDateActivity::class.java))
+            R.id.logout -> finishAffinity()
         }
         return super.onOptionsItemSelected(item)
     }
